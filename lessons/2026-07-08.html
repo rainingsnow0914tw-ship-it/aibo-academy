@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-07-08 · 🩺 W1 失效模式全景｜阿寶學院</title>
+<style>
+  :root {
+    --cream: #fdf9f3;
+    --carrot: #ff9556;
+    --brown: #3a2a1a;
+    --card: #ffffff;
+    --tag-bg: #fff2e6;
+    --soft-shadow: 0 2px 10px rgba(58, 42, 26, 0.08);
+    --border-soft: 1px solid rgba(58, 42, 26, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    padding: 24px 18px 56px;
+    max-width: 640px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  a.back {
+    display: inline-block;
+    color: var(--carrot);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+  header .meta {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    opacity: 0.72;
+    margin-bottom: 8px;
+  }
+  header .line {
+    background: var(--tag-bg);
+    color: var(--carrot);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    opacity: 1;
+  }
+  h1 {
+    font-size: 28px;
+    color: var(--brown);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--carrot);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+  section {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px 22px;
+    box-shadow: var(--soft-shadow);
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--brown);
+  }
+  h3 {
+    font-size: 16px;
+    color: var(--carrot);
+    margin-bottom: 6px;
+  }
+  section p, section li {
+    font-size: 15px;
+    color: var(--brown);
+  }
+  .failure-mode {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: var(--border-soft);
+  }
+  .failure-mode:first-of-type { border-top: none; padding-top: 4px; }
+  .mode-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--tag-bg);
+    color: var(--carrot);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .mode-content { flex: 1; }
+  .mode-content p { margin-top: 4px; }
+  .source {
+    font-size: 13px;
+    opacity: 0.72;
+    margin-top: 6px !important;
+  }
+  .source a {
+    color: var(--carrot);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 149, 86, 0.4);
+  }
+  blockquote.en {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 14px 16px;
+    background: var(--cream);
+    border-left: 3px solid var(--carrot);
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .zh {
+    font-size: 15px;
+    opacity: 0.88;
+    margin-bottom: 12px;
+  }
+  .pronounce {
+    font-size: 13px;
+    opacity: 0.75;
+    background: var(--cream);
+    padding: 10px 12px;
+    border-radius: 10px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+  }
+  .task-name {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  ol { padding-left: 24px; }
+  ol li { margin-bottom: 6px; }
+  .hint {
+    font-size: 14px;
+    opacity: 0.75;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: var(--border-soft);
+  }
+  .feedback ul {
+    list-style: none;
+    padding: 0;
+  }
+  .feedback ul li {
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .feedback ul li::before {
+    content: "•";
+    color: var(--carrot);
+    position: absolute;
+    left: 6px;
+    font-weight: 700;
+  }
+  footer.checklist {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 18px 22px;
+    box-shadow: var(--soft-shadow);
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 20px;
+    border: 1px dashed rgba(255, 149, 86, 0.3);
+  }
+  footer.checklist ul {
+    list-style: none;
+    padding: 8px 0;
+  }
+  footer.checklist li {
+    padding: 3px 0;
+    font-size: 13px;
+  }
+  footer.checklist .note {
+    font-size: 12px;
+    opacity: 0.72;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: var(--border-soft);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" class="back">← 回課程目錄</a>
+
+<header>
+  <div class="meta">
+    <span class="date">📅 2026-07-08 週三</span>
+    <span class="line">🩺 W1</span>
+  </div>
+  <h1>失效模式全景</h1>
+  <p class="subtitle">臨床AI安全線 · Week 1</p>
+</header>
+
+<main>
+  <section class="topic">
+    <h2>🎯 今夜主題</h2>
+    <p style="margin-bottom:16px;">建立臨床 AI 失效的<strong>全景框架</strong>——之後 7 週會把這四種模式逐一拆開細看。今晚先看它們各自長什麼樣。</p>
+
+    <div class="failure-mode">
+      <div class="mode-number">①</div>
+      <div class="mode-content">
+        <h3>分類/清單本身有漏</h3>
+        <p>FDA AI-Enabled Medical Device List 官方自承是「<strong>非詳盡清單</strong>」——連監管單位自己都承認手上這份名單沒收全。「有多少 AI 醫療設備在跑」這個最基本的問題、答案就不完整。</p>
+        <p class="source">來源：<a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices">FDA｜Artificial Intelligence-Enabled Medical Devices</a></p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">②</div>
+      <div class="mode-content">
+        <h3>用錯代理變數、系統性傷害特定族群</h3>
+        <p>Obermeyer et al. 2019 在 <em>Science</em> 揭露的種族偏誤案例——演算法用「醫療花費」當「疾病嚴重度」的 proxy。結果：黑人病患因為過去被系統性給予較少照護、花費較低、模型就把他們判為「病情較輕」、應得的照護資源被系統性低估。</p>
+        <p class="source">來源：Obermeyer Z, et al. <em>Science</em>. 2019;366(6464):447-453. <a href="https://doi.org/10.1126/science.aax2342">DOI: 10.1126/science.aax2342</a></p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">③</div>
+      <div class="mode-content">
+        <h3>責任與可解釋性真空</h3>
+        <p>AI 出錯了、誰負責？黑箱模型的判斷、醫師怎麼向病人解釋？WHO 2021 發布首份全球 AI 醫療報告、提出六大指導原則——處理責任歸屬、透明度、包容性、以及人類自主性等議題。</p>
+        <p class="source">來源：<a href="https://www.who.int/news/item/28-06-2021-who-issues-first-global-report-on-ai-in-health-and-six-guiding-principles-for-its-design-and-use">WHO｜首份全球 AI 醫療報告與六大指導原則（2021）</a></p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">④</div>
+      <div class="mode-content">
+        <h3>上線後模型行為漂移</h3>
+        <p>AI 醫療設備通過核准上市之後、隨著病人族群、資料分布、臨床流程變化、模型效能可能漂移。FDA 為此提出 <strong>Predetermined Change Control Plan (PCCP)</strong> 機制——允許廠商在申請上市時、預先申報「這個模型上線後會如何自我更新」、監管單位審過就免每次改都重新申請。</p>
+        <p class="source">來源：<a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/predetermined-change-control-plans-medical-devices">FDA｜Predetermined Change Control Plans for Medical Devices</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tonight-quote">
+    <h2>🇬🇧 今夜一句</h2>
+    <blockquote class="en">"The bias arises because the algorithm predicts health care costs rather than illness."</blockquote>
+    <p class="zh">這個偏誤的根源、在於演算法預測的是「醫療花費」、而不是「疾病本身」。<br><span style="opacity:0.7">（出自今晚 ② 那條 Obermeyer 論文摘要）</span></p>
+    <p class="pronounce">跟讀提示（8 個 chunk）：<br>the-BIAS · uh-RY-zez · be-KOZ · the AL-guh-rith-um · pre-DIKTS · HEALTH-care-KOSTS · RAH-ther than · ILL-ness</p>
+  </section>
+
+  <section class="watercolor">
+    <h2>🎨 水彩微作業</h2>
+    <p class="task-name"><strong>「看不見的裂縫」系列起手式</strong>（🩺線 8 週水彩系列 W1）</p>
+    <ol>
+      <li>濕紙、刷一層底色（隨意什麼色都好、淡淡的）</li>
+      <li>刷色途中、<strong>故意留白一條裂縫</strong>——不畫過去、就那樣留著</li>
+      <li>等紙全乾</li>
+      <li>沿著裂縫邊緣、輕點深色——讓「看不見的裂縫」隱隱顯現</li>
+    </ol>
+    <p class="hint">15 分鐘內、目標是**體感**「本該有東西、但沒收進去」的感覺——呼應今晚 ① 「清單有漏」。</p>
+  </section>
+
+  <section class="feedback">
+    <h2>💌 下課回傳給阿寶老師</h2>
+    <ul>
+      <li>最有感的一條（4 個失效模式裡挑一個）</li>
+      <li>作業照（水彩「看不見的裂縫」）</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="checklist">
+  <p><strong>執行檢查表：</strong></p>
+  <ul>
+    <li>☑ lessons/2026-07-08.html 已存</li>
+    <li>☑ index.html 已更新</li>
+    <li>☑ Notion 已 append（Routine 完成）</li>
+    <li>☑ 已 push 到 main</li>
+  </ul>
+  <p class="note">⚠️ 2026-07-08 Routine 執行時、Cloud Routine 的 GitHub App 對 aibo-academy 沒 write 權限（403 Resource not accessible by integration）。Notion append 成功、但 GitHub push 失敗。本堂課由 Chloe 家 Code 阿寶用 gh CLI 從 Notion 摘要重建 HTML、代 Routine 完成 push。GitHub App 權限修復後、下堂 Routine 應能自主 push。</p>
+</footer>
+</body>
+</html>
