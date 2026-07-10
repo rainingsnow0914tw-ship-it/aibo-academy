@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-07-11 · ⚔️ W3 Evals 入門｜阿寶學院</title>
+<style>
+  :root {
+    --cream: #fdf9f3;
+    --carrot: #ff9556;
+    --brown: #3a2a1a;
+    --card: #ffffff;
+    --tag-bg: #fff2e6;
+    --soft-shadow: 0 2px 10px rgba(58, 42, 26, 0.08);
+    --border-soft: 1px solid rgba(58, 42, 26, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    padding: 24px 18px 56px;
+    max-width: 640px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  a.back {
+    display: inline-block;
+    color: var(--carrot);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+  header .meta {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    opacity: 0.72;
+    margin-bottom: 8px;
+  }
+  header .line {
+    background: var(--tag-bg);
+    color: var(--carrot);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    opacity: 1;
+  }
+  h1 {
+    font-size: 28px;
+    color: var(--brown);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--carrot);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+  section {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px 22px;
+    box-shadow: var(--soft-shadow);
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--brown);
+  }
+  h3 {
+    font-size: 16px;
+    color: var(--carrot);
+    margin-bottom: 6px;
+  }
+  section p, section li {
+    font-size: 15px;
+    color: var(--brown);
+  }
+  .failure-mode {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: var(--border-soft);
+  }
+  .failure-mode:first-of-type { border-top: none; padding-top: 4px; }
+  .mode-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--tag-bg);
+    color: var(--carrot);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .mode-content { flex: 1; }
+  .mode-content p { margin-top: 4px; }
+  .source {
+    font-size: 13px;
+    opacity: 0.72;
+    margin-top: 6px !important;
+  }
+  .source a {
+    color: var(--carrot);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 149, 86, 0.4);
+  }
+  blockquote.en {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 14px 16px;
+    background: var(--cream);
+    border-left: 3px solid var(--carrot);
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .zh {
+    font-size: 15px;
+    opacity: 0.88;
+    margin-bottom: 12px;
+  }
+  .pronounce {
+    font-size: 13px;
+    opacity: 0.75;
+    background: var(--cream);
+    padding: 10px 12px;
+    border-radius: 10px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+  }
+  .task-name {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  ol { padding-left: 24px; }
+  ol li { margin-bottom: 6px; }
+  .hint {
+    font-size: 14px;
+    opacity: 0.75;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: var(--border-soft);
+  }
+  .feedback ul {
+    list-style: none;
+    padding: 0;
+  }
+  .feedback ul li {
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .feedback ul li::before {
+    content: "•";
+    color: var(--carrot);
+    position: absolute;
+    left: 6px;
+    font-weight: 700;
+  }
+  footer.checklist {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 18px 22px;
+    box-shadow: var(--soft-shadow);
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 20px;
+    border: 1px dashed rgba(255, 149, 86, 0.3);
+  }
+  footer.checklist ul {
+    list-style: none;
+    padding: 8px 0;
+  }
+  footer.checklist li {
+    padding: 3px 0;
+    font-size: 13px;
+  }
+  footer.checklist .note {
+    font-size: 12px;
+    opacity: 0.72;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: var(--border-soft);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" class="back">← 回課程目錄</a>
+
+<header>
+  <div class="meta">
+    <span class="date">📅 2026-07-11 週六</span>
+    <span class="line">⚔️ W3</span>
+  </div>
+  <h1>Evals 入門</h1>
+  <p class="subtitle">Agent評估線 · Week 3</p>
+</header>
+
+<main>
+  <section class="topic">
+    <h2>🎯 今夜主題</h2>
+    <p style="margin-bottom:16px;">上兩週拆了 Agent 的構造、也拆了它會怎麼失效——這週換個問法：<strong>還沒出事之前、怎麼先測出來？</strong>答案的名字叫 eval（evaluation 的簡稱）。今晚從「什麼是 eval」的原始定義出發、一路拆到 2026 年初 Anthropic 剛發布的 Agent 專用評估架構。</p>
+
+    <div class="failure-mode">
+      <div class="mode-number">①</div>
+      <div class="mode-content">
+        <h3>Eval 的原始定義：輸入→輸出→打分</h3>
+        <p>2023 年 3 月、OpenAI 隨 GPT-4 發布同步開源 Evals 框架、把「eval」講得很白話：給模型一個輸入、產生一個輸出、再用一套評分邏輯（資料集＋評分模板）去衡量這個輸出的品質。這是後來所有「Agent eval」討論的地基——只是 Agent 的「輸出」不再是一句話、而是一整串會呼叫工具、改變環境狀態的行動。</p>
+        <p class="source">來源：<a href="https://github.com/openai/evals">GitHub｜openai/evals（2023-03 隨 GPT-4 開源）</a>、<a href="https://techcrunch.com/2023/03/14/with-evals-openai-hopes-to-crowdsource-ai-model-testing/">TechCrunch｜With Evals, OpenAI hopes to crowdsource AI model testing（2023-03-14）</a></p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">②</div>
+      <div class="mode-content">
+        <h3>Agent eval 的四塊積木</h3>
+        <p>2026 年 1 月、Anthropic 工程部落格發布《Demystifying evals for AI agents》、把 Agent 評估拆成四個字：<strong>task</strong>（任務，一個有明確成功標準的測試案例）、<strong>trial</strong>（試驗，針對同一個 task 跑一次——因為 Agent 有隨機性、同一 task 要跑很多次 trial）、<strong>transcript</strong>（逐字記錄，也叫 trajectory，包含輸出、工具呼叫、推理過程、每一個中間結果）、以及 <strong>grader</strong>（評分邏輯，負責替 transcript 或最終結果打分）。原文說得直接：「造就 Agent 好用的能力——自主性、智能、彈性——同時也是讓它們更難評估的原因。」</p>
+        <p class="source">來源：<a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Anthropic Engineering Blog｜Demystifying evals for AI agents（2026年1月）</a></p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">③</div>
+      <div class="mode-content">
+        <h3>三種評分者：code / model / human</h3>
+        <p>Grader 不是只有一種。<strong>Code-based（規則式）</strong>——快、便宜、可重複、適合單元測試、狀態驗證、工具呼叫是否正確；<strong>Model-based（模型當裁判）</strong>——適合處理細膩、開放式的任務、但要給清楚的評分準則、每個維度分開判、並定期拿真人專家校準；<strong>Human（真人）</strong>——是黃金標準、但沒辦法規模化、應該留給校準 model-based grader、或處理最主觀的輸出。三種通常要混著用、不是三選一。</p>
+        <p class="source">來源：同上，Anthropic Engineering Blog（2026年1月）</p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">④</div>
+      <div class="mode-content">
+        <h3>怎麼起步：20-50 個真實失敗案例＋親自讀逐字稿</h3>
+        <p>Anthropic 給的起步建議很具體：<strong>20 到 50 個從真實失敗案例挑出來的簡單 task</strong>就是很好的開始——如果系統已經上線、bug tracker 和客服工單就是最好的素材來源；早期階段每次修改的效應量通常很明顯、所以小樣本就夠用。但原文也提醒一件事、呼應這週三剛講完的「自動化偏誤」：「除非你親自讀過很多次 trial 產生的逐字稿和評分、否則你不會知道你的 grader 到底準不準。」——評分系統本身、也需要被人盯著看。</p>
+        <p class="source">來源：同上，Anthropic Engineering Blog（2026年1月）</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tonight-quote">
+    <h2>🇬🇧 今夜一句</h2>
+    <blockquote class="en">"You won't know if your graders are working well unless you read the transcripts and grades from many trials."</blockquote>
+    <p class="zh">除非你親自讀過很多次試驗產生的逐字稿和評分結果、否則你不會知道你的評分者到底準不準。<br><span style="opacity:0.7">（出自今晚 ④ Anthropic《Demystifying evals for AI agents》）</span></p>
+    <p class="pronounce">跟讀提示（8 個 chunk）：<br>you WON'T know · if your GRAY-derz · are WORK-ing well · un-LESS you READ · the TRAN-skripts and · GRAYDZ from · MEH-nee · TRY-uhlz</p>
+  </section>
+
+  <section class="watercolor">
+    <h2>🎨 水彩微作業</h2>
+    <p class="task-name"><strong>「看不見的攻擊面」系列 W2：三層評分者</strong></p>
+    <ol>
+      <li>拿出上週那張「四格十字」（Safety/Security × Existing/Novel）、沒有的話重畫一次同樣的四格構圖</li>
+      <li>第一層：四格都薄薄刷一次清水加極淡的顏色、讓它快乾——象徵 code-based grader：快、可重複、但只碰得到最表面</li>
+      <li>等第一層八成乾、只在「你上週畫得最沒把握」的那一格疊第二層、筆觸放慢、讓邊緣自己暈開——象徵 model-based grader：處理細膩判斷、需要耐心校準</li>
+      <li>全乾之後、用最深的顏色在四格交界正中央點一小滴——只點一次、不重來、不暈開——象徵 human grader：稀少、不 scale、但校準全局</li>
+    </ol>
+    <p class="hint">15 分鐘內、退後看三層顏色分不分得出層次——呼應今晚③「三種評分者混著用」：沒有一種能單獨扛下全部。</p>
+  </section>
+
+  <section class="feedback">
+    <h2>💌 下課回傳給阿寶老師</h2>
+    <ul>
+      <li>最有感的一條（四個重點裡挑一個）</li>
+      <li>作業照（水彩「三層評分者」）</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="checklist">
+  <p><strong>執行檢查表：</strong></p>
+  <ul>
+    <li>☑ lessons/2026-07-11.html 已存</li>
+    <li>☑ index.html 已更新</li>
+    <li>☑ Notion 已 append</li>
+    <li>☑ 已 push 到 claude/amazing-pascal-g8z4zr（見進度.md）</li>
+  </ul>
+</footer>
+</body>
+</html>
