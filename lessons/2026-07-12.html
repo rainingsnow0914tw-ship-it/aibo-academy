@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-07-12 · 🗞️ 整合日｜阿寶學院</title>
+<style>
+  :root {
+    --cream: #fdf9f3;
+    --carrot: #ff9556;
+    --brown: #3a2a1a;
+    --card: #ffffff;
+    --tag-bg: #fff2e6;
+    --soft-shadow: 0 2px 10px rgba(58, 42, 26, 0.08);
+    --border-soft: 1px solid rgba(58, 42, 26, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    padding: 24px 18px 56px;
+    max-width: 640px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  a.back {
+    display: inline-block;
+    color: var(--carrot);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+  header .meta {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    opacity: 0.72;
+    margin-bottom: 8px;
+  }
+  header .line {
+    background: var(--tag-bg);
+    color: var(--carrot);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    opacity: 1;
+  }
+  h1 {
+    font-size: 28px;
+    color: var(--brown);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--carrot);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+  section {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px 22px;
+    box-shadow: var(--soft-shadow);
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--brown);
+  }
+  h3 {
+    font-size: 16px;
+    color: var(--carrot);
+    margin-bottom: 6px;
+  }
+  section p, section li {
+    font-size: 15px;
+    color: var(--brown);
+  }
+  .failure-mode {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: var(--border-soft);
+  }
+  .failure-mode:first-of-type { border-top: none; padding-top: 4px; }
+  .mode-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--tag-bg);
+    color: var(--carrot);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .mode-content { flex: 1; }
+  .mode-content p { margin-top: 4px; }
+  .source {
+    font-size: 13px;
+    opacity: 0.72;
+    margin-top: 6px !important;
+  }
+  .source a {
+    color: var(--carrot);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 149, 86, 0.4);
+  }
+  .caveat {
+    font-size: 13px;
+    opacity: 0.68;
+    margin-top: 4px !important;
+    font-style: italic;
+  }
+  blockquote.en {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 14px 16px;
+    background: var(--cream);
+    border-left: 3px solid var(--carrot);
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .zh {
+    font-size: 15px;
+    opacity: 0.88;
+    margin-bottom: 12px;
+  }
+  .pronounce {
+    font-size: 13px;
+    opacity: 0.75;
+    background: var(--cream);
+    padding: 10px 12px;
+    border-radius: 10px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+  }
+  .task-name {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  ol { padding-left: 24px; }
+  ol li { margin-bottom: 6px; }
+  .hint {
+    font-size: 14px;
+    opacity: 0.75;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: var(--border-soft);
+  }
+  .feedback ul {
+    list-style: none;
+    padding: 0;
+  }
+  .feedback ul li {
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .feedback ul li::before {
+    content: "•";
+    color: var(--carrot);
+    position: absolute;
+    left: 6px;
+    font-weight: 700;
+  }
+  footer.checklist {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 18px 22px;
+    box-shadow: var(--soft-shadow);
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 20px;
+    border: 1px dashed rgba(255, 149, 86, 0.3);
+  }
+  footer.checklist ul {
+    list-style: none;
+    padding: 8px 0;
+  }
+  footer.checklist li {
+    padding: 3px 0;
+    font-size: 13px;
+  }
+  footer.checklist .note {
+    font-size: 12px;
+    opacity: 0.72;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: var(--border-soft);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" class="back">← 回課程目錄</a>
+
+<header>
+  <div class="meta">
+    <span class="date">📅 2026-07-12 週日</span>
+    <span class="line">🗞️ 整合日</span>
+  </div>
+  <h1>本週 AI 動態：三份摘要拆給你看</h1>
+  <p class="subtitle">整合日 · 時事節</p>
+</header>
+
+<main>
+  <section class="topic">
+    <h2>🎯 今夜主題</h2>
+    <p style="margin-bottom:16px;">今晚不上新課、換個角色：把過去一週信箱裡躺著的三封 Perplexity 產業摘要拆開讀。原則很簡單——摘要本身是二手整理，凡是能查到官方一手來源的，附上連結；查不到的，老實說「這是摘要的說法，未逐條查證」。</p>
+
+    <div class="failure-mode">
+      <div class="mode-number">①</div>
+      <div class="mode-content">
+        <h3>這週最大背景：模型與代理集中發布，但比拼的東西變了</h3>
+        <p>本週的產業摘要指出：多家公司在同一週密集推出新一代模型與可持續運行的背景代理（background agent），競爭重點已經從「參數規模」轉向「推理效率、成本、以及 agent 之間能不能互通（agent interoperability）」——換句話說，重點不再是單次問答有多聰明，而是能不能撐起一整條多步驟、跨裝置的工作流程。</p>
+        <p class="caveat">這一條是 Perplexity 摘要的整體判讀，本身即為二手綜合意見，未逐一查證每家公司的一手公告。</p>
+        <p class="source">來源：<a href="https://www.perplexity.ai/search/fen-xi-ben-zhou-zui-zhong-yao-keLT19OxSnS5TZmYPrb2.g">Perplexity 每週摘要《本週全球 AI 與新興技術格局》（2026-07-10，team@mail.perplexity.ai）</a></p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">②</div>
+      <div class="mode-content">
+        <h3>兩件查證屬實、跟你工作流有關的更新</h3>
+        <p><strong>Claude Science（2026-06-30 beta 上線）</strong>：Anthropic 推出的科研工作台，重點不是新模型、而是工作流——每一個產出的圖表都附上生成它的原始碼、環境設定與完整訊息紀錄，設計成「協調 agent 負責分派、獨立的審查 agent 負責檢查引用文獻、數字與圖表」的雙代理架構，目的是讓 AI 產出的科研結果可被追溯、可重現。<strong>Claude Fable 5 / Mythos 5（2026-06-09 上線）</strong>：兩者是同一底層模型的不同安全分級版本——Fable 5 已全面開放（API／Bedrock／Google Cloud／Microsoft Foundry 皆可用），Mythos 5 因具備較強的生物與資安能力、目前僅開放給少數經審核的合作夥伴（Project Glasswing）。</p>
+        <p class="source">來源：<a href="https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/">TechCrunch｜Anthropic's Claude Science bets on workflow, not a new model（2026-06-30）</a>、<a href="https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5">Claude Platform Docs｜Introducing Claude Fable 5 and Claude Mythos 5</a></p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">③</div>
+      <div class="mode-content">
+        <h3>一個摘要講得不夠精確的地方：Agents SDK 不是「這週」的新聞</h3>
+        <p>摘要把 OpenAI 的 Responses API 和 Agents SDK 跟「近期變動」放在一起講，容易讓人以為是這一兩週剛發生的事——查證後發現，這其實是 2025 年 3 月 11 日就發布的框架，如今已經是業界搭建多步驟 agent 工作流程的標準配備之一，並非新消息。原始 README 裡的定義很直白：<em>「一個輕量卻強大、用來搭建多代理工作流程的框架」</em>。放在整合日提這一條，是提醒自己：讀二手摘要時，時間感常常會被「近期」這種模糊字眼壓縮或拉長，查一次原始發布日期，通常幾分鐘就能還原真相。</p>
+        <p class="source">來源：<a href="https://github.com/openai/openai-agents-python">GitHub｜openai/openai-agents-python README</a></p>
+      </div>
+    </div>
+
+    <div class="failure-mode">
+      <div class="mode-number">④</div>
+      <div class="mode-content">
+        <h3>本週摘要給臨床工作者的建議：工具分工，而不是找一個全能工具</h3>
+        <p>本週摘要的判讀是：截至目前沒有明確針對臨床或科研流程的新功能上線，所以重點該放在善用既有工具的分工，而不是追新——ChatGPT 適合撰寫初稿與臨床文件、Claude 擅長長文件理解與批判性閱讀、Perplexity 適合需要附引用的查證工作、Gemini／Copilot 則適合處理行政文件與簡報整理。摘要建議的具體做法是：用一個有引用來源的工具做實證查證，再固定用一個主力 LLM 設計格式化的工作流程，藉此壓縮寫作與行政時間、同時保留臨床判斷的主控權。</p>
+        <p class="caveat">這一條為摘要的建議性判讀，屬於工具使用心法而非可逐條查證的技術規格，故未附加一手來源。</p>
+        <p class="source">來源：<a href="https://www.perplexity.ai/search/mei-zhou-bang-wo-sou-xun-bing-LapBRti.TFyPe8UJowCALA">Perplexity 每週摘要《本週醫療與科研 AI 工具動向》（2026-07-06，team@mail.perplexity.ai）</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tonight-quote">
+    <h2>🇬🇧 今夜一句</h2>
+    <blockquote class="en">"The OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows."</blockquote>
+    <p class="zh">OpenAI Agents SDK 是一個輕量卻強大、用來搭建多代理工作流程的框架。<br><span style="opacity:0.7">（出自今晚③ openai/openai-agents-python README 原文第一句）</span></p>
+    <p class="pronounce">跟讀提示（8 個 chunk）：<br>the o-pen-AI · A-gents S-D-K · IS a LITE-weight · yet POW-er-ful · FRAME-work · for BUILD-ing · MUL-ti-A-gent · WORK-flows</p>
+  </section>
+
+  <section class="watercolor">
+    <h2>🎨 水彩微作業</h2>
+    <p class="task-name"><strong>整合日暖身：本週色票並排</strong></p>
+    <ol>
+      <li>拿出本週兩張水彩（🩺「看不見的裂縫」點點鈍化、⚔️「看不見的攻擊面」三層評分者）</li>
+      <li>在一張新紙上，各從兩張畫裡挑一小塊你覺得最能代表那晚心情的顏色，各刷一小筆、左右並排、中間留一點空白，不混色</li>
+      <li>看著兩筆顏色，寫（或只是想）一句話：這週哪一條線讓你更有感——不用畫得漂亮，純粹留一個記號</li>
+    </ol>
+    <p class="hint">15 分鐘內、不開新系列、不用完成度高——下週三、四兩條線會各自往前走，今晚這張只是給自己一個回頭看的暫停點。</p>
+  </section>
+
+  <section class="feedback">
+    <h2>💌 下課回傳給阿寶老師</h2>
+    <ul>
+      <li>最有感的一條（四個重點裡挑一個）</li>
+      <li>作業照（水彩「本週色票並排」）</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="checklist">
+  <p><strong>執行檢查表：</strong></p>
+  <ul>
+    <li>☑ lessons/2026-07-12.html 已存</li>
+    <li>☑ index.html 已更新</li>
+    <li>☑ Notion 已 append</li>
+    <li>☑ 已直接 push 到 main（無 branch protection、單人 owner，見進度.md 待修事項已修復）</li>
+  </ul>
+</footer>
+</body>
+</html>
